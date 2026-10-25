@@ -1,0 +1,336 @@
+{
+ "live_sample_rate": 44100,
+ "c1": {
+  "file": "sweepkit-toms-92bpm-Am.wav",
+  "sr": 48000,
+  "bits": 24,
+  "ch": 2,
+  "frames": 1001739,
+  "expected": 1001739,
+  "peak_dBFS": -1.05,
+  "first_transient_sample": 0,
+  "first_transient_ms": 0.0,
+  "peak_in_first_2ms_dBFS": -3.11,
+  "pass": true
+ },
+ "c1_all_fills": {
+  "riser": {
+   "frames": 1001739,
+   "peak_dBFS": -1.05,
+   "first_ms": 0.0
+  },
+  "swell": {
+   "frames": 1001739,
+   "peak_dBFS": -1.05,
+   "first_ms": 0.0
+  },
+  "down": {
+   "frames": 1001739,
+   "peak_dBFS": -1.05,
+   "first_ms": 0.0
+  },
+  "toms": {
+   "frames": 1001739,
+   "peak_dBFS": -1.05,
+   "first_ms": 0.0
+  },
+  "snare": {
+   "frames": 1001739,
+   "peak_dBFS": -1.05,
+   "first_ms": 0.0
+  },
+  "stop": {
+   "frames": 1001739,
+   "peak_dBFS": -1.05,
+   "first_ms": 0.0
+  },
+  "drop": {
+   "frames": 1001739,
+   "peak_dBFS": -1.05,
+   "first_ms": 0.0
+  },
+  "half": {
+   "frames": 1001739,
+   "peak_dBFS": -1.05,
+   "first_ms": 0.0
+  },
+  "none": {
+   "frames": 1001739,
+   "peak_dBFS": -1.05,
+   "first_ms": 0.0
+  }
+ },
+ "c1_all_fills_pass": true,
+ "c2_env": {
+  "full_mix_1ms_rms_max_step_near_seam": 0.3184,
+  "full_mix_1ms_rms_step_p99.9_in_file": 0.2845
+ },
+ "c2": {
+  "total_frames_4x": 4006956,
+  "expected_4x": 4006956,
+  "drift_samples": 0,
+  "downbeat_kick_onset_offsets_samples_32bars": [
+   2,
+   3,
+   4
+  ],
+  "onset_spread_samples": 2,
+  "onset_trend_samples_over_32_bars": -0.481,
+  "onsets_per_bar": [
+   3,
+   3,
+   4,
+   3,
+   4,
+   3,
+   3,
+   3,
+   3,
+   2,
+   4,
+   3,
+   4,
+   3,
+   3,
+   3,
+   3,
+   2,
+   4,
+   3,
+   4,
+   3,
+   2,
+   3,
+   3,
+   2,
+   4,
+   2,
+   4,
+   3,
+   2,
+   3
+  ],
+  "seam_vs_continuous_render": {
+   "tonal_chairs_only": "kick,toms,bass,pad (noise voices excluded: white noise shifted by a sub-sample is not comparable sample-by-sample)",
+   "N1": 1001739,
+   "N2": 2003478,
+   "peak": 1.466660976409912,
+   "maxdiff_tiled_vs_continuous_rel": 0.03794618110475579,
+   "maxdiff_within_10ms_of_seam_rel": 0.0030798990900286136
+  },
+  "seam_abs_step": [
+   0.12421,
+   0.12421,
+   0.12421
+  ],
+  "deterministic_maxdiff": 1.192093037651054e-07,
+  "pass": true
+ },
+ "c6": {
+  "60bpm": {
+   "note_s": 4.0,
+   "rms_30-50%": 0.2102,
+   "rms_92-99%": 0.2231,
+   "end/mid": 1.061
+  },
+  "68bpm": {
+   "note_s": 3.529,
+   "rms_30-50%": 0.2085,
+   "rms_92-99%": 0.2067,
+   "end/mid": 0.991
+  },
+  "pass": true
+ },
+ "midi": {
+  "file": "sweepkit-toms-92bpm-Am.mid",
+  "type": 1,
+  "tracks": [
+   "SweepKit 92 BPM Am - Tom roll",
+   "Drums (GM, ch 10)",
+   "Bass",
+   "Chords (pad)",
+   "FX cues (riser = key root C2-B2, downlifter C3-B3, impact C1-B1, swell C#4)"
+  ],
+  "tempo_bpm": 92.0,
+  "length_s": 20.8696,
+  "expected_s": 20.8696,
+  "notes_per_track": [
+   0,
+   154,
+   15,
+   24,
+   0
+  ],
+  "markers": [
+   "Am",
+   "F",
+   "C",
+   "G",
+   "Am",
+   "F",
+   "C",
+   "G",
+   "Fill: Tom roll"
+  ]
+ },
+ "c4": {
+  "bpm": {
+   "heard_after_s": 0.221,
+   "one_bar_s": 2.609,
+   "pass": true
+  },
+  "mute_bass": {
+   "heard_after_s": 0.126,
+   "one_bar_s": 2.0,
+   "pass": true
+  },
+  "fill": {
+   "heard_after_s": 0.167,
+   "one_bar_s": 2.0,
+   "pass": true
+  },
+  "style": {
+   "heard_after_s": 0.185,
+   "one_bar_s": 2.0,
+   "pass": true
+  },
+  "key": {
+   "heard_after_s": 0.217,
+   "one_bar_s": 2.0,
+   "pass": true
+  },
+  "still_playing_no_restart": true,
+  "pass": true
+ },
+ "midi_out": {
+  "msgs_sent_while_playing": 268,
+  "first5": [
+   [
+    176,
+    123,
+    0
+   ],
+   [
+    177,
+    123,
+    0
+   ],
+   [
+    178,
+    123,
+    0
+   ],
+   [
+    185,
+    123,
+    0
+   ],
+   [
+    153,
+    36,
+    110
+   ]
+  ],
+  "selected": "out1"
+ },
+ "c3": {
+  "hidden_s": 30,
+  "playing_on_return": false,
+  "steps_scheduled_while_hidden_and_after": 0,
+  "active_sources_after": 0,
+  "status": "Stopped because the tab was hidden. Press Play to start again.",
+  "pass": true
+ },
+ "midi_in": {
+  "vels": [
+   [
+    36,
+    30
+   ],
+   [
+    38,
+    120
+   ],
+   [
+    64,
+    100
+   ]
+  ],
+  "playing_after_notes_and_start_msg": false,
+  "pad_voices_held": 1,
+  "held_after_noteoff_with_pedal": 1,
+  "sustain_flag": true,
+  "after_pedal_up": 0,
+  "inputs": [
+   "(none)",
+   "Mock Keys 49"
+  ],
+  "outputs": [
+   "(none)",
+   "Mock Synth Out"
+  ],
+  "note": "Playing from Mock Keys 49. Drum pads (GM notes 35\u201359) hit the kit, notes 60+ play the pad, below 35 the bass. Velocity and sustain (CC64) work. Notes never start the beat.",
+  "pass": true
+ },
+ "keys": {
+  "log": [
+   [
+    36,
+    "kbd"
+   ],
+   [
+    38,
+    "ptr"
+   ]
+  ],
+  "playing_after_space": false
+ },
+ "audio_io": {
+  "inputs": [
+   "System default input",
+   "Fake Audio Input 1",
+   "Fake Audio Input 2"
+  ],
+  "outputs": [
+   "System default",
+   "Fake Audio Output 1",
+   "Fake Audio Output 2"
+  ],
+  "setSinkId_supported": true,
+  "in_state": "Input on: Fake Default Audio Input \u00b7 meter only (monitor off).",
+  "meter_max_pct_over_3s": 0
+ },
+ "persist": {
+  "bpm": "120",
+  "key": "2",
+  "fill": "snare",
+  "style": "four"
+ },
+ "license": {
+  "buy": "Checkout opening soon \u00b7 $19 once",
+  "activate_msg": "Checkout opening soon. License keys can't be checked until the store is live."
+ },
+ "c5": {
+  "external_requests": [],
+  "note": "no samples: all voices synthesized"
+ },
+ "c7": {
+  "@main/@gh-pages": 0,
+  "Math.random_total": 0,
+  "Math.random_export_path": 0,
+  "setTimeout_in_scheduling": 0,
+  "voice_names": [
+   "Synth snare (noise + tone)",
+   "Synth hat (filtered noise)",
+   "Synth toms",
+   "Noise crash",
+   "Saw bass",
+   "Saw pad (chords)",
+   "Noise+saw riser / swell / downlifter, sine sub impact"
+  ],
+  "LOOKAHEAD_MS=25": true,
+  "SCHEDULE_AHEAD=0.12": true,
+  "pass": true
+ },
+ "errors": []
+}

@@ -1,0 +1,6 @@
+.env*
+.vercel
+node_modules
+dist
+__pycache__
+*.wav

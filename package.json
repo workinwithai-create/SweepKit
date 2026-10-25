@@ -1,0 +1,2 @@
+{ "name":"sweepkit","version":"1.0.0","private":true,"description":"SweepKit: write the drum fill / transition into the end of your section. Static browser desk.","license":"MIT",
+  "scripts":{"build":"mkdir -p dist && cp index.html app.js styles.css dist/"} }

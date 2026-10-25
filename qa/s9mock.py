@@ -1,0 +1,2 @@
+MOCK="""(()=>{ const sent=[]; window.__midiSent=sent; const inp={id:'in1',name:'Mock Keys 49',type:'input',onmidimessage:null}; const out={id:'out1',name:'Mock Synth Out',type:'output',send:(d,t)=>sent.push({d:[...d],t})};
+ const acc={inputs:new Map([['in1',inp]]),outputs:new Map([['out1',out]]),onstatechange:null}; window.__mockIn=inp; navigator.requestMIDIAccess=()=>Promise.resolve(acc); })();"""

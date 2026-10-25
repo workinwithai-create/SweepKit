@@ -1,0 +1,31 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SweepKit · transitions in your BPM and key</title><meta name="description" content="Write the drum fill or transition into the end of your section at your BPM, key and chords. Export a 48 kHz WAV on the grid plus multitrack MIDI.">
+<link rel="stylesheet" href="styles.css"></head><body>
+<div id="tap" class="tap"><div><h1>SweepKit</h1><p>Risers, reverse swells, downlifters, impacts and drum fills synthesized at <em>your</em> BPM and key, landing exactly on 1.</p><button id="tapBtn" class="big">Tap to start audio</button>
+<p class="ios" hidden>iPhone/iPad: flip the silent switch off. It mutes web audio.</p></div></div>
+<header><h1>SweepKit <small>transitions in your BPM and key</small></h1><p>Pack risers and impacts are printed at someone else's tempo and key, so they smear when stretched and land off the downbeat. SweepKit builds the transition for <em>your</em> song: set BPM, key and chords, pick a transition, hear it land, step through variations, drag the WAV + MIDI into bar 1.</p>
+<p class="ios note" hidden>iOS: the silent switch mutes web audio. Turn it off if you hear nothing.</p></header>
+<main>
+<section><h2>1 · Your song first</h2>
+<div class="row"><label>BPM <input id="bpm" type="number" min="60" max="180"></label><label>Key <select id="key"></select></label>
+<label class="grow">4 chords <input id="chords" placeholder="Am F C G"></label><label>Section <select id="bars"><option value="4">4 bars</option><option value="8">8 bars</option><option value="16">16 bars (licensed)</option></select></label></div>
+<div id="chordErr" class="err"></div><div class="sub">Groove</div><div id="styles" class="cards"></div><div class="sub">Demos (they only fill the fields)</div><div id="presets" class="cards small"></div></section>
+<section><h2>2 · The transition</h2><div id="fills" class="cards"></div>
+<div class="row"><label>Length <select id="fillLen"><option value="4">1 beat</option><option value="8">2 beats</option><option value="16" selected>1 bar</option><option value="32">2 bars</option></select></label>
+<label>Intensity <input id="intensity" type="range" min="1" max="3" step="1"></label>
+<span class="var">Variation <button id="varPrev" aria-label="previous variation">◀</button> <b id="varLbl">#1</b> <button id="varNext" aria-label="next variation">▶</button></span>
+<label><input id="crash" type="checkbox"> Crash on 1</label></div></section>
+<section class="transport"><div class="row"><button id="play" class="big">▶ Play section</button><button id="stopBtn" class="big alt">■ Stop</button><div id="status" class="status">Tap to start audio.</div></div>
+<div id="grid" class="grid"></div><p class="hint">Shaded = the transition. The section loops back into bar 1, so you hear it land. Every change applies on the next 16th, no restart.</p></section>
+<section><h2>3 · Mix</h2><div id="mixer" class="mixer"></div><div class="row"><label>Master <input id="master" type="range" min="0" max="1.5" step="0.01"></label><label>Your playing <input id="liveGain" type="range" min="0" max="1.5" step="0.01"></label></div></section>
+<section><h2>4 · Play along</h2><p class="hint">Pads: A S D F G H J · pad chords in your key: Q–P. Space does nothing on purpose: notes never start the beat.</p>
+<div id="pads" class="pads"></div><div class="row"><button id="octDn">Oct −</button><span id="octLbl"></span><button id="octUp">Oct +</button></div><div id="keys" class="keys"></div>
+<div class="row"><label>MIDI in <select id="midiIn"></select></label><label>MIDI out <select id="midiOut"></select></label></div><p id="midiNote" class="hint"></p>
+<div class="row"><label>Audio out <select id="audioOut"></select></label><span id="audioOutNote" class="hint"></span></div>
+<div class="row"><label>Audio in <select id="audioIn"></select></label><button id="inBtn">Turn input on</button><label><input id="monitor" type="checkbox"> Monitor through the desk</label><div class="meterw"><div id="meter" class="meter"></div></div></div><p id="inState" class="hint">Input off. Play your guitar or sing over it (headphones).</p></section>
+<section><h2>5 · Export to your DAW</h2><p id="fileInfo" class="hint"></p>
+<div class="row"><button id="exportWav" class="big">WAV (48k/24, on the grid)</button><button id="exportMid" class="big alt">Multitrack MIDI</button><button id="exportPack">Transition pack ZIP (licensed)</button><button id="exportStem">Transition-only stem (licensed)</button></div>
+<p class="hint">Downbeat at sample 0, exact bar length, ring-out folded back to the start so it loops clean, peak −1 dBFS. MIDI: drums (GM ch 10), bass, chords, FX cues, tempo, chord + transition markers.</p></section>
+<section><h2>License</h2><p id="licState"></p><div class="row"><a id="buy" class="btn">Checkout opening soon</a><input id="licKey" placeholder="License key"><button id="licBtn">Activate</button><button id="licOff" hidden>Remove license</button></div></section>
+<footer>SweepKit by WorkinWithAI · every voice is a synthesizer, named as one · nothing uploaded · settings saved in this browser</footer>
+</main><script src="app.js"></script></body></html>
